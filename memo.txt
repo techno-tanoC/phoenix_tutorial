@@ -1,0 +1,31 @@
+nodeの用意(5.0.0以上)
+
+---
+
+postgresの用意
+
+```docker-compose.yml
+postgres:
+  image: postgres              
+  environment:
+    POSTGRES_USER: postgres    
+    POSTGRES_PASSWORD: postgres
+  volumes:
+    - ./data:/var/lib/postgresql/data/
+  ports: 
+    - 5432:5432
+```
+
+docker-compose up
+
+---
+
+inotifywait
+linuxではapt-get install inotify-tools
+macではbrew install fswatch
+
+---
+
+error: Compiling of web/static/js/app.js failed. Couldn't find preset "es2015" relative to directory "web/static/js" ; Compiling of web/static/js/socket.js failed. Couldn't find preset "es2015" relative to directory "web/static/js"
+
+npm install babel-preset-es2015
