@@ -19,8 +19,8 @@ defmodule Tutorial.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Tutorial do
-  #   pipe_through :api
-  # end
+  scope "/api", Tutorial do
+    pipe_through :api
+    resources "/users", UserController
+  end
 end

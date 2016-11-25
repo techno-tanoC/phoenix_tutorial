@@ -1,0 +1,6 @@
+mix phoenix.gen.json User users name:string email:string
+mix ecto.migrate
+
+web/router.exの"/api"にresources "/users", UserControllerを追加
+
+mix phoenix.server
