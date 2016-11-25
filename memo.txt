@@ -4,3 +4,12 @@ mix ecto.migrate
 web/router.exの"/api"にresources "/users", UserControllerを追加
 
 mix phoenix.server
+
+---
+
+brunch-config.jsを消す
+$ npm install -D webpack
+webpack.config.jsを書く
+web/static/js/app.jsの中身をコメントアウト
+config/dev.exsを書き換える
+web/static/js/app.jsの中身にconsole.logを加えてライブリロード
