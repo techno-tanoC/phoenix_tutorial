@@ -1,0 +1,12 @@
+web/router.exにrouteを追加
+web/controllers/home_controller.exを追加
+web/views/home_view.exを追加
+web/templates/home/hello.htmlを追加
+
+---
+
+↑と同じことをhelp, aboutでもやる
+
+---
+
+デフォルトのtitleを使いたいときは、renderをマクロでラップする
